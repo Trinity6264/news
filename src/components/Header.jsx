@@ -60,7 +60,9 @@ const Header = () => {
                     <nav>
                         {
                             navLinks.map(({ name, path }) => {
-                                return <Link onClick={closeNavbar} to={path} key='name'>{name}</Link>
+
+                                return (<Link onClick={closeNavbar} to={path} key='name'>{name}
+                                </Link>)
 
                             },
                             )}

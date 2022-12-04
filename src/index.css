@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 :root {
@@ -17,7 +18,7 @@ body {
   font-size: 15px;
   max-width: 1440px;
   background-color: var(--OffWhite);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -30,6 +31,10 @@ img {
 
 li {
   list-style: none;
+}
+hr{
+  background-color: var(--GrayishBlue);
+  color: var(--DarkGrayishBlue);
 }
 
 /* 375px */
