@@ -12,11 +12,15 @@ const Home = () => {
       <div className="first-container">
         <div className="first-div">
           <img src={LadingPicture} alt="landing pic" />
-          <h2 className='title'>The Bright Future of Web 3.0?</h2>
-          <p className="subtitle">
-            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
-          </p>
-          <button className="read-more">READ MORE</button>
+          <div className="landing-info">
+            <h2 className='title'>The Bright Future of Web 3.0?</h2>
+            <div className="landing-sub-info">
+              <p className="subtitle">
+                We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+              </p>
+              <button className="read-more">READ MORE</button>
+            </div>
+          </div>
         </div>
         {/* Second div */}
         <div className="second-div">
@@ -32,8 +36,8 @@ const Home = () => {
         </div>
       </div>
       <div className="second-container">
-        {SecondData.map(({ content,image,index,title}) => { 
-         return <ImageInfoDetails content={content} image={image} index={index} title={title} key={index} />
+        {SecondData.map(({ content, image, index, title }) => {
+          return <ImageInfoDetails content={content} image={image} index={index} title={title} key={index} />
 
         })}
       </div>

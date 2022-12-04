@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import './style/Header.css'
 import Logo from '../assets/images/logo.svg'
 import MenuIcon from '../assets/images/icon-menu.svg'
@@ -6,6 +6,10 @@ import CloseIcon from '../assets/images/icon-menu-close.svg'
 import { Link } from 'react-router-dom'
 const Header = () => {
     const [isOpen, setOpen] = useState(false);
+
+
+
+
 
     const openNavbar = () => {
         setOpen(true);
@@ -46,6 +50,18 @@ const Header = () => {
                 <div className="menu-btn-wrapper" >
                     <img src={MenuIcon} alt="menu icon" onClick={openNavbar} />
                 </div>
+                <ul className="tablet-nav-menu-links">
+                    <nav>
+                        {
+                            navLinks.map(({ name, path }) => {
+                                return (<Link to={path} key='name'>{name}
+                                </Link>)
+
+                            },
+                            )}
+                    </nav>
+
+                </ul>
             </header>
             <div className="nav-wrapper" style={{
                 left: isOpen ? '0%' : '150%'

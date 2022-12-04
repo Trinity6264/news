@@ -10,6 +10,10 @@ header {
   background-color: var(--OffWhite);
 }
 
+.tablet-nav-menu-links {
+  display: none;
+}
+
 header .logo {
   width: 3rem;
 }
@@ -63,6 +67,31 @@ nav a {
   font-size: 1.2rem;
   transition: color 300ms ease-in;
 }
-nav a:hover{
-    color: var(--SoftOrange);
+nav a:hover {
+  color: var(--SoftOrange);
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    align-items: center;
+    margin-left: 1.1rem;
+    margin-right: 1.1rem;
+  }
+
+  header .menu-btn-wrapper {
+    width: 1.8rem;
+    cursor: pointer;
+    display: none;
+  }
+
+  .tablet-nav-menu-links {
+    display: block;
+  }
+  .tablet-nav-menu-links nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 1.4rem;
+    margin-right: 1.5rem;
+  }
 }
